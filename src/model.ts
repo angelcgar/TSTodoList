@@ -35,7 +35,7 @@ export default class Model {
   }
 
   getTodos(): Todo[] {
-    return this.todos;
+    return this.todos.map((todo) => ({ ...todo }));
   }
 
   findTodo(id: number) {
